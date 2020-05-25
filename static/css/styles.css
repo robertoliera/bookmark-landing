@@ -1,0 +1,105 @@
+.header {
+  background: white;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1em 0;
+  transition: 0.3s background;
+}
+.header__logo {
+  display: inline-flex;
+  width: 150px;
+  height: 40px;
+  background: url("../../static/images/logo-bookmark.svg") no-repeat center center;
+  background-size: contain;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: rgba(47, 53, 79, 0.9);
+  height: 100vh;
+  transform: translateY(-50px);
+  transition: 0.3s transform, 0.3s opacity;
+  will-change: transform;
+}
+.menu ul {
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  border-top: 1px solid var(--grayishBlue);
+}
+.menu li:last-child a {
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-top: 1em;
+  padding: 0.5em;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding: 1em;
+  letter-spacing: 2px;
+}
+.menu__checkbox {
+  display: none;
+}
+.menu__checkbox:checked ~ .header {
+  background: rgba(47, 53, 79, 0.9);
+}
+.menu__checkbox:checked ~ .header .menu__open {
+  background-image: url("../../static/images/icon-close.svg");
+}
+.menu__checkbox:checked ~ .header .header__logo {
+  background-image: url("../../static/images/logo-bookmark-white.svg");
+}
+.menu__checkbox:checked ~ .header .menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.menu__open {
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  cursor: pointer;
+  background: url("../../static/images/icon-hamburger.svg") no-repeat center center;
+}
+
+:root {
+  --softBlue: hsl(231, 69%, 60%);
+  --softRed: hsl(0, 94%, 66%);
+  --grayishBlue: hsl(229, 8%, 60%);
+  --veryDarkBlue: hsl(229, 31%, 21%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  color: var(--veryDarkBlue);
+  font-size: 18px;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 1em;
+}
+
+/*# sourceMappingURL=styles.css.map */
