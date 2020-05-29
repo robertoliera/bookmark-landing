@@ -1,5 +1,10 @@
-@import "header.scss";
-@import "hero.scss";
+@import "header";
+@import "hero";
+@import "features";
+@import "download";
+@import "faq";
+@import "contact";
+@import "footer";
 
 :root {
   --softBlue: hsl(231, 69%, 60%);
@@ -7,18 +12,98 @@
 
   --grayishBlue: hsl(229, 8%, 60%);
   --veryDarkBlue: hsl(229, 31%, 21%);
+  --lightGray: #f7f7f7;
 }
 
 body {
   margin: 0;
-  padding: 0;
   font-family: "Rubik", sans-serif;
   color: var(--veryDarkBlue);
   font-size: 18px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.is-hidden {
+  display: none !important;
 }
 
 .wrapper {
   max-width: 1280px;
   margin: auto;
   padding: 0 1em;
+}
+
+.u-h1 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.u-h2 {
+  @extend .u-h1;
+  font-size: 1.5em;
+}
+
+.u-h3 {
+  font-weight: 500;
+}
+
+.u-h4 {
+  @extend .u-h1;
+  font-size: 1.3em;
+}
+
+.u-p {
+  color: var(--grayishBlue);
+  line-height: 1.8;
+  font-size: 0.9em;
+}
+
+.u-button {
+  background: var(--softBlue);
+  color: white;
+  padding: 1em 1em;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  margin-left: 0.5em;
+  box-shadow: 0 5px 10px -5px var(--softBlue);
+  &:first-of-type {
+    margin: 0;
+  }
+
+  &.is-gray {
+    color: var(--veryDarkBlue);
+    background: var(--lightGray);
+  }
+
+  &.is-fullwidth {
+    width: 100%;
+  }
+
+  &.is-red {
+    background: var(--softRed);
+  }
+}
+
+.u-input {
+  width: 100%;
+  padding: 1em;
+  display: block;
+  border-radius: 5px;
+  border: 0;
+  box-sizing: border-box;
+  margin-bottom: 1.2em;
+  font-size: 0.9em;
+  &::placeholder {
+    font-family: "Rubik", sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: var(--grayishBlue);
+  }
 }

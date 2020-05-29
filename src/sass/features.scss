@@ -1,0 +1,39 @@
+.features {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.tabs {
+  &__link {
+    padding: 1em 0;
+    border-bottom: 1px solid var(--grayishBlue);
+    color: var(--grayishBlue);
+    font-weight: 400;
+    &.active {
+      position: relative;
+      color: var(--veryDarkBlue);
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        border: 2px solid var(--softRed);
+        width: 150px;
+      }
+    }
+  }
+  &__grid {
+    margin-top: 4em;
+  }
+  &__item {
+    display: none;
+    &.active {
+      display: block;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

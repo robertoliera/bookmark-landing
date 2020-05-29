@@ -6,6 +6,7 @@
   top: 0;
   padding: 1em 0;
   transition: 0.3s background;
+  z-index: 1;
   &__logo {
     display: inline-flex;
     width: 150px;

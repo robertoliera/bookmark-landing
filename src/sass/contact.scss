@@ -1,0 +1,18 @@
+.contact {
+  text-align: center;
+  padding: 3em 0;
+  background: var(--softBlue);
+  color: white;
+
+  .u-p {
+    letter-spacing: 5px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  form {
+    max-width: 450px;
+    margin: auto;
+  }
+}

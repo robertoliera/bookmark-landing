@@ -1,0 +1,40 @@
+.faq {
+  text-align: center;
+  padding: 2em 0;
+  &__grid {
+    margin: 3em 0;
+  }
+  &__item {
+    text-align: left;
+    margin-bottom: 0.8em;
+  }
+  summary {
+    background: url("../../static/images/icon-arrow.svg") no-repeat center right;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 1em 0;
+    font-size: 0.9em;
+    .u-p {
+      color: var(--veryDarkBlue);
+      padding: 1em 0;
+      margin: 0;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  details[open] {
+    summary {
+      background-image: url("../../static/images/icon-arrow-red.svg");
+      border: none;
+    }
+  }
+
+  &__answer {
+    display: none;
+  }
+}
