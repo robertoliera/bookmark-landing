@@ -82,6 +82,57 @@
   background: url("../../static/images/icon-hamburger.svg") no-repeat center center;
 }
 
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 1.5em 0;
+  }
+
+  .menu {
+    position: initial;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    background: initial;
+    transform: translateY(0);
+  }
+  .menu__open {
+    display: none;
+  }
+  .menu ul {
+    display: flex;
+    margin: 0;
+  }
+  .menu li {
+    border: 0;
+  }
+  .menu li:last-child a {
+    margin-top: 0;
+    padding: 1em 2em;
+    background: var(--softRed);
+    color: white;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid var(--softRed);
+    cursor: pointer;
+    margin-left: 2em;
+    transition: 0.3s all ease-in-out;
+  }
+  .menu li:last-child a:hover {
+    color: var(--softRed);
+    background: white;
+    border: 2px solid var(--softRed);
+    box-shadow: 0 5px 10px -7px var(--softBlue);
+  }
+  .menu a {
+    color: var(--veryDarkBlue);
+    font-size: 0.9em;
+    transition: 0.3s all ease-in-out;
+  }
+  .menu a:hover {
+    color: var(--softRed);
+  }
+}
 .hero {
   text-align: center;
   padding: 3em 0;
@@ -285,7 +336,7 @@ ul {
 .u-button {
   background: var(--softBlue);
   color: white;
-  padding: 1em 1em;
+  padding: 1em;
   font-size: 0.9em;
   font-weight: 500;
   border-radius: 5px;
