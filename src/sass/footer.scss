@@ -24,3 +24,39 @@
     }
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__primary {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 2em;
+      }
+
+      ul {
+        margin: 0;
+        display: flex;
+        li {
+          line-height: 1;
+          a {
+            color: white;
+            text-decoration: none;
+            padding: 2em;
+            transition: 0.3s all ease-in-out;
+
+            &:hover {
+              color: var(--softRed);
+            }
+          }
+        }
+      }
+    }
+  }
+}

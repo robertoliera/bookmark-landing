@@ -73,13 +73,26 @@ ul {
   cursor: pointer;
   margin-left: 0.5em;
   box-shadow: 0 5px 10px -5px var(--softBlue);
+  border: 2px solid var(--softBlue);
+  transition: 0.3s all ease-in-out;
   &:first-of-type {
     margin: 0;
   }
 
+  &:hover {
+    background: white;
+    color: var(--softBlue);
+  }
+
   &.is-gray {
+    border: 2px solid var(--lightGray);
     color: var(--veryDarkBlue);
     background: var(--lightGray);
+    &:hover {
+      background: white;
+      color: var(--veryDarkBlue);
+      border: 2px solid var(--veryDarkBlue);
+    }
   }
 
   &.is-fullwidth {
@@ -88,12 +101,18 @@ ul {
 
   &.is-red {
     background: var(--softRed);
+    border: 2px solid var(--softRed);
+    &:hover {
+      background: white;
+      color: var(--softRed);
+      border: 2px solid var(--softRed);
+    }
   }
 }
 
 .u-input {
   width: 100%;
-  padding: 1em;
+  padding: 1.1em;
   display: block;
   border-radius: 5px;
   border: 0;

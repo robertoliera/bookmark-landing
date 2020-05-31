@@ -50,13 +50,19 @@
 
   <section class="hero">
     <div class="wrapper">
-      <img class="hero__image" src="./static/images/illustration-hero.svg" alt="">
-      <h1 class="u-h1">A Simple Bookmark Manager</h1>
-      <p class="u-p">A clean and simple interface to organize your favourite websites. Open a new
-        browser tab and see your sites load instantly. Try it for free.</p>
-      <div class="hero__buttons">
-        <button class="u-button">Get it on Chrome</button>
-        <button class="u-button is-gray">Get it on Firefox</button>
+      <div class="hero__grid">
+        <div class="hero__image">
+          <img src="./static/images/illustration-hero.svg" alt="">
+        </div>
+        <div class="hero__content">
+          <h1 class="u-h1">A Simple Bookmark Manager</h1>
+          <p class="u-p">A clean and simple interface to organize your favourite websites. Open a new
+            browser tab and see your sites load instantly. Try it for free.</p>
+          <div class="hero__buttons">
+            <button class="u-button">Get it on Chrome</button>
+            <button class="u-button is-gray">Get it on Firefox</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -85,32 +91,39 @@
         <div class="tabs__grid">
           <div class="tabs__item active">
             <img src="./static/images/illustration-features-tab-1.svg" alt="features 1">
-            <h2 class="u-h2">Bookmark in one click</h2>
-            <p class="u-p">
-              Organize your bookmarks however you like. Our simple drag-and-drop interface
-              gives you complete control over how you manage your favourite sites.
-            </p>
-            <button class="u-button">More Info</button>
+            <div>
+              <h2 class="u-h2">Bookmark in one click</h2>
+              <p class="u-p">
+                Organize your bookmarks however you like. Our simple drag-and-drop interface
+                gives you complete control over how you manage your favourite sites.
+              </p>
+              <button class="u-button">More Info</button>
+            </div>
           </div>
 
           <div class="tabs__item">
             <img src="./static/images/illustration-features-tab-2.svg" alt="features 2">
-            <h2 class="u-h2">Intelligent search</h2>
-            <p class="u-p">
-              Our powerful search feature will help you find saved sites in no time at all.
-              No need to trawl through all of your bookmarks.
-            </p>
-            <button class="u-button">More Info</button>
+            <div>
+              <h2 class="u-h2">Intelligent search</h2>
+              <p class="u-p">
+                Our powerful search feature will help you find saved sites in no time at all.
+                No need to trawl through all of your bookmarks.
+              </p>
+              <button class="u-button">More Info</button>
+            </div>
+
           </div>
 
           <div class="tabs__item">
             <img src="./static/images/illustration-features-tab-3.svg" alt="features 3">
-            <h2 class="u-h2">Share your bookmarks</h2>
-            <p class="u-p">
-              Easily share your bookmarks and collections with others. Create a shareable
-              link that you can send at the click of a button.
-            </p>
-            <button class="u-button">More Info</button>
+            <div>
+              <h2 class="u-h2">Share your bookmarks</h2>
+              <p class="u-p">
+                Easily share your bookmarks and collections with others. Create a shareable
+                link that you can send at the click of a button.
+              </p>
+              <button class="u-button">More Info</button>
+            </div>
           </div>
         </div>
       </div>
@@ -218,21 +231,29 @@
 
   <footer class="footer">
     <div class="wrapper">
-      <div class="footer__primary">
-        <img src="./static/images/logo-bookmark-footer.svg" alt="logo bookmark footer">
-        <ul>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-      <div class="footer__socials">
-        <a href="#">
-          <img src="./static/images/icon-facebook.svg" alt="logo facebook">
-        </a>
-        <a href="#">
-          <img src="./static/images/icon-twitter.svg" alt="logo twitter">
-        </a>
+      <div class="footer__content">
+        <div class="footer__primary">
+          <img src="./static/images/logo-bookmark-footer.svg" alt="logo bookmark footer">
+          <ul>
+            <li>
+              <a href="#">Features</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__socials">
+          <a href="#">
+            <img src="./static/images/icon-facebook.svg" alt="logo facebook">
+          </a>
+          <a href="#">
+            <img src="./static/images/icon-twitter.svg" alt="logo twitter">
+          </a>
+        </div>
       </div>
     </div>
   </footer>

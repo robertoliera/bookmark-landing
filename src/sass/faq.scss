@@ -1,6 +1,6 @@
 .faq {
   text-align: center;
-  padding: 2em 0;
+  padding: 3em 0;
   &__grid {
     margin: 3em 0;
   }
@@ -13,6 +13,8 @@
     border-bottom: 1px solid #dfdfdf;
     padding: 1em 0;
     font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
     .u-p {
       color: var(--veryDarkBlue);
       padding: 1em 0;
@@ -25,6 +27,9 @@
     &:focus {
       outline: none;
     }
+    &:hover {
+      color: var(--softRed);
+    }
   }
 
   details[open] {
@@ -36,5 +41,28 @@
 
   &__answer {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .faq {
+    .wrapper > .u-p {
+      width: 35%;
+      margin: auto;
+    }
+
+    &__grid {
+      width: 38%;
+      margin: 2em auto;
+    }
+    &__item {
+      margin: 0;
+      &:first-child {
+        summary {
+          border-top: 1px solid #dfdfdf;
+          padding: 1.3em 0;
+        }
+      }
+    }
   }
 }

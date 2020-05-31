@@ -1,6 +1,6 @@
 .features {
   text-align: center;
-  padding: 2em 0;
+  padding: 3em 0;
 }
 
 .tabs {
@@ -9,6 +9,10 @@
     border-bottom: 1px solid var(--grayishBlue);
     color: var(--grayishBlue);
     font-weight: 400;
+    cursor: pointer;
+    &:hover {
+      color: var(--softRed);
+    }
     &.active {
       position: relative;
       color: var(--veryDarkBlue);
@@ -34,6 +38,52 @@
 
     img {
       max-width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .features {
+    .wrapper > .u-p {
+      width: 475px;
+      margin: 0 auto;
+    }
+  }
+
+  .tabs {
+    margin-top: 4em;
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__link {
+      padding: 2em;
+      &.active {
+        &::before {
+          width: 100%;
+          bottom: -1px;
+        }
+      }
+    }
+
+    &__item {
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      &.active {
+        display: flex;
+      }
+
+      img {
+        margin-right: 5em;
+      }
+
+      & > div {
+        width: auto;
+        text-align: left;
+      }
     }
   }
 }

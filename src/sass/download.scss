@@ -1,6 +1,6 @@
 .download {
   text-align: center;
-  padding: 2em 0;
+  padding: 3em 0;
 
   &__grid {
     margin: 0 1em;
@@ -14,6 +14,7 @@
     background: url("../../static/images/bg-dots.svg") no-repeat center bottom
       105px;
     background-size: contain;
+    border-radius: 15px;
     .u-h3 {
       margin-top: 1.5em;
       margin-bottom: 0.4em;
@@ -21,6 +22,34 @@
     .u-p {
       margin-top: 0;
       margin-bottom: 4em;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .download {
+    &__grid {
+      display: flex;
+      justify-content: center;
+    }
+
+    .wrapper > .u-p {
+      width: 37%;
+      margin: auto;
+    }
+
+    &__item {
+      width: 20%;
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+      &:nth-child(2) {
+        top: 40px;
+      }
+      &:nth-child(3) {
+        top: 80px;
+      }
     }
   }
 }
